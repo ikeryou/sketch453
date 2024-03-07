@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1;
+}
+
+html, body {
+  background-color: #000;
+}
+
+.s-gpu {
+  will-change: transform;
+}
+
+.js-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.l-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 9999;
+}
+.l-info p {
+  font-size: 14px;
+  color: inherit;
+  background-color: #000;
+  padding: 5px 20px 5px 20px;
+}
+.l-info a {
+  color: inherit;
+  text-decoration: line-through;
+}
+.l-info a:hover {
+  text-decoration: none;
+}
+
+body.-bg-black .l-info {
+  color: #000;
+}
+body.-bg-black .l-info p {
+  background-color: #fff;
+}
+
+@media screen and (max-width:768px) {
+  .l-info {
+    justify-content: flex-start;
+    margin-top: 20px;
+    height: auto;
+  }
+  .l-info p {
+    font-size: 10px;
+  }
+}
